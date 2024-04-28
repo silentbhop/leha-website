@@ -1,0 +1,98 @@
+
+body {
+    background-color: #2c2c2c;
+}
+
+/* Стиль для шапки */
+.header {
+    background-color: #181818;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Стиль для ссылок */
+.header a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Стиль для иконок */
+.header a i {
+    margin-right: 5px;
+}
+
+.header a:hover {
+    color: rgb(0, 89, 255); /* Изменение цвета текста при наведении мышки */
+    
+    /* Вы также можете добавить другие эффекты, например, изменения фона, отступов или шрифтов */
+}
+
+/* Стиль для заголовка в центре */
+.main-content {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 22px;
+    color: white;
+
+}
+
+.library-content {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 22px;
+    color: white;
+
+}
+
+
+
+.upload-content {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 22px;
+    color: white;
+
+}
+
+.leha-text {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 50px;
+    font-size: 22px;
+    color: white;
+    margin-left: 150px;
+    margin-right: 150px;
+    word-spacing: 5px;
+
+}
+
+.background {
+    background-image: url('/static/main/img/lehapudgegor.png');
+    background-size: cover; /* Это свойство гарантирует, что изображение будет полностью покрывать область */
+    background-repeat: no-repeat; /* Это свойство предотвращает повторение изображения */
+    background-position: center; /* Это свойство центрирует изображение */
+    width: 100%; /* Это свойство делает область полной ширины */
+    height: 100%; /* Это свойство делает область полной высоты */
+  }
+
+/* Стилизация изображения */
+#lehi {
+    position: absolute;
+    top: 50%; /* Сместить позицию по вертикали до середины контейнера */
+    left: 50%; /* Сместить позицию по горизонтали до середины контейнера */
+    transform: translate(-50%, -50%); /* Центрировать изображение */
+    width: 50%; /* Установите ширину изображения на 100% ширины контейнера */
+    height: auto; /* Высота будет автоматически пропорциональна ширине */
+}
+
+#lehapudgegor {
+    background-repeat: no-repeat;
+    background-size: 1920px 1100px;
+    background-attachment: fixed;
+}
+
+#library_image {
+    width: 20%;
+    height: auto;
+}

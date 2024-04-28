@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+
+{% block title %}Библиотека{% endblock %}
+
+{% block content %}
+    <div class="upload-content">
+        <h1>Загрузить файл</h1>
+        <form method="post" enctype="multipart/form-data" style="width: 35%; margin: 0 auto; margin-top: 25px;">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.file }}<br>
+            <button class="btn btn-success" type="submit">Загрузить</button>                     
+        </form>
+    </div>
+{% endblock %}

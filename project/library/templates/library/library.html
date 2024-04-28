@@ -1,0 +1,34 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load custom_filters %}
+
+
+{% block title %}Библиотека{% endblock %}
+
+{% block content %}
+    <div class="library-content">
+        <h1>Библиотека</h1>
+        <h2>
+            <a href="{% url 'upload' %}">
+                <button class="btn btn-info" style="width: 170px;">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    Загрузить файл
+                </button>
+            </a>
+        </h2>
+
+        {% for file in files %}
+            <br>
+            <p>{{ file.title }}</p>
+            {% if file.file.url|endswith:'.mp3' or file.file.url|endswith:'.wav' %}
+                <audio controls src="{{ file.file.url }}">
+                    Браузер не поддерживает аудио элемент
+                </audio>
+                <p>{{ file.date }}</p>
+            {% else %}
+                <img src="{{ file.file.url }}" alt="{{ file.title }}" id="library_image">
+                <p>{{ file.date }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
